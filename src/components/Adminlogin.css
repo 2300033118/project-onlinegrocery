@@ -1,0 +1,162 @@
+/* Main Container - Light & Airy */
+.admin-login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(236, 97, 28, 0.246) 0%, rgba(9, 136, 43, 0.285) 100%);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Floating Bubbles */
+.floating-circle {
+  position: absolute;
+  border-radius: 10%;
+  background: rgba(17, 84, 200, 0.204);
+  backdrop-filter: blur(5px);
+  animation: float 10s infinite ease-in-out;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-50px) rotate(5deg); }
+}
+
+/* Glass Card */
+.login-form-container {
+  background: rgba(88, 13, 13, 0.144);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(212, 18, 18, 0.5);
+  box-shadow: 
+    0 8px 32px rgba(8, 24, 247, 0.503),
+    inset 0 0 0 1px rgba(224, 10, 10, 0.923);
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+.login-form-container:hover {
+  box-shadow: 
+    0 12px 40px rgba(10, 22, 191, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.047);
+}
+
+/* Title */
+.login-title {
+  color: #0b0bed6f;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.login-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #11cb21 0%, #33fc25 100%);
+  border-radius: 3px;
+}
+
+/* Input Fields */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(20, 17, 17, 0.05);
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: rgba(106, 17, 203, 0.4);
+  box-shadow: 
+    0 0 0 3px rgba(106, 17, 203, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.login-input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Floating Labels */
+.input-label {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0);
+  padding: 0 5px;
+}
+
+.login-input:focus + .input-label,
+.login-input:not(:placeholder-shown) + .input-label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.8rem;
+  color: #6a11cb;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Submit Button */
+.login-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(37, 117, 252, 0.2);
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 117, 252, 0.3);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-form-container {
+    padding: 30px 25px;
+    margin: 0 20px;
+  }
+  
+  .login-title {
+    font-size: 1.7rem;
+    margin-bottom: 35px;
+  }
+}
+

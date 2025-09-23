@@ -1,0 +1,61 @@
+ /*
+ .payment-form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.payment-form-container h2,
+.payment-form-container h3 {
+  text-align: center;
+  color: #333;
+}
+
+.payment-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-form-container input,
+.payment-form-container select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.payment-form-container button {
+  padding: 10px;
+  background-color: #00695c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.payment-form-container button:hover {
+  background-color: #004d40;
+}
+
+.message {
+  margin-top: 1rem;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #fff;
+  padding: 10px;
+  border-left: 4px solid #00695c;
+  margin: 5px 0;
+} 
+*/
